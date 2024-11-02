@@ -26,17 +26,3 @@ endpoints:
     # This is only applicable to REST endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.yaml
-
-dependencies:
-   serviceReferences:
-    - name: thirdparty:PetstoreService/v1
-      connectionConfig: 01ef9826-ee8a-160e-ae4f-517a3dc4bf6f
-      env:
-      - from: APIKey
-        to: API_KEY
-      - from: ServiceURL
-        to: SERVICE_URL
-
-   connectionReferences:
-    - name: tsett
-      resourceRef: thirdparty:PetstoreService/v1
