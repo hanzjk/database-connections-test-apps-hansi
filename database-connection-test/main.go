@@ -65,11 +65,11 @@ func main() {
 
 func databaseConfigs(w http.ResponseWriter, r *http.Request) {
 	// Read environment variables
-	host := os.Getenv("HOST_NAME")
-	port := os.Getenv("PORT")
-	username := os.Getenv("USERNAME")
-	password := os.Getenv("PASSWORD")
-	database := os.Getenv("DATABASE_NAME")
+	host := os.Getenv("CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_HOST_NAME")
+	port := os.Getenv("CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_PORT")
+	username := os.Getenv("CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_USERNAME")
+	password := os.Getenv("CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_PASSWORD")
+	database := os.Getenv("CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_DATABASE_NAME")
 
 	// Prepare a JSON response with the environment variables
 	envVars := map[string]string{
