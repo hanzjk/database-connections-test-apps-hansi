@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+info:
+  title: Return Database Configs
+  version: 1.0.0
+paths:
+  /database-configs:
+    get:
+      summary: Return database configs
+      tags:
+        - database-configs
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
