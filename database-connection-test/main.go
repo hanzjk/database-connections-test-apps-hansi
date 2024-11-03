@@ -76,7 +76,7 @@ func databaseConfigs(w http.ResponseWriter, r *http.Request) {
 		"host":         host,
 		"port":       port,
 		"username": username,
-		"isPasswordEmpty": password == "",
+		"isPasswordEmpty": fmt.Sprintf("%t", password == ""),
 		"database":    database,
 	}
 
