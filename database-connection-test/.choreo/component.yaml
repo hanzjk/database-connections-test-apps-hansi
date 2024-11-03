@@ -27,7 +27,7 @@ endpoints:
 outbound:
     serviceReferences:
     - name: database:devHrDb
-      connectionConfig: 01ef99d5-64cc-1c58-941c-50efe1be73bd
+      connectionConfig: 01ef99d8-0b19-1cae-bc52-8daa01fcaf24
       env:
       - from: HostName
         to: CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_HOST_NAME
