@@ -23,7 +23,7 @@ spec:
   outbound:
     serviceReferences:
     - name: database:devHrDb
-      connectionConfig: 01ef99d0-e110-1da6-ab35-c5b4ae62f8f9
+      connectionConfig: 01ef99d2-4d40-10de-85c5-8493b3c03f84
       env: 
       - from: HostName
         to: HOST_NAME
