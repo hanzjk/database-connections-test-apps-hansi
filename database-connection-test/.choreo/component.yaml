@@ -15,14 +15,16 @@ endpoints:
     # Allowed values: REST, GraphQL, GRPC, TCP, UDP.
     type: REST
     # +optional Network level visibilities of the endpoint.
-    # Takes priority over networkVisibility if defined. 
+    # Takes priority over networkVisibility if defined.
     # Accepted values: Project|Organization|Public(Default).
-    networkVisibilities: 
+    networkVisibilities:
       - Public
-      - Project
-      - Organization
     # +optional The path to the schema definition file.
     # Defaults to wildcard route if not specified.
     # This is only applicable to REST endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.yaml
+dependencies:
+    connectionReferences:
+    - name: 01ef99d5-64cc-1c58-941c-50efe1be73bd
+      resourceRef: database:devHrDb
