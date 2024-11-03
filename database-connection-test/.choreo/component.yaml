@@ -1,4 +1,4 @@
-schemaVersion: 1.1
+schemaVersion: 1.0
 # +optional Incoming connection details for the component
 endpoints:
   # +required Unique name for the endpoint.
@@ -19,10 +19,23 @@ endpoints:
     # Accepted values: Project|Organization|Public(Default).
     networkVisibilities: 
       - Public
-      - Project
-      - Organization
     # +optional The path to the schema definition file.
     # Defaults to wildcard route if not specified.
     # This is only applicable to REST endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.yaml
+outbound:
+    serviceReferences:
+    - name: database:devHrDb
+      connectionConfig: 01ef99d2-4d40-10de-85c5-8493b3c03f84
+      env:
+      - from: HostName
+        to: CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_HOST_NAME
+      - from: Port
+        to: CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_PORT
+      - from: Username
+        to: CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_USERNAME
+      - from: Password
+        to: CHOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_PASSWORD
+      - from: DatabaseName
+        to: HOREO_INTEGRATION-TEST-DB-CONNECTION-FOR-DATABASE_DATABASE_NAME
