@@ -26,5 +26,5 @@ endpoints:
     schemaFilePath: openapi.yaml
 dependencies:
     connectionReferences:
-    - name: 01ef99d5-64cc-1c58-941c-50efe1be73bd
+    - name: 01ef99d8-0b19-1cae-bc52-8daa01fcaf24
       resourceRef: database:devHrDb
